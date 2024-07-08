@@ -18,14 +18,18 @@ function checkAlarm() {
     const day = now.getDay(); 
     const minutes = now.getMinutes();
 
+    console.log("Current Day:", day); 
+    console.log("Current Minutes:", minutes); 
+
     switch(day) {
-        case 3: 
+        case 2: 
             if (minutes % 2 === 0) {
-                alert("Alarm! It's Wednesday and it's an even minute.");
+                alert("We're in the Endgame now.");
             }
             break;
         default:
             break;
     }
 }
+checkAlarm();
 setInterval(checkAlarm, 60000);
